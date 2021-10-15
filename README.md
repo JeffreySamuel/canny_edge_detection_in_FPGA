@@ -69,3 +69,58 @@ Usually a weak edge pixel caused from true edges will be connected to a strong e
 ![op_2](https://user-images.githubusercontent.com/85092975/137437241-3b249e7a-1e55-49e0-8d0f-06e8b1bb28df.jpg)
 
 ![op_3](https://user-images.githubusercontent.com/85092975/137437259-6b51e4a5-5342-4ffc-9eda-ad310e7b1992.jpg)
+
+# References
+
+REFERENCES 
+1. https://slack-files.com/T023E787WLV-F02DV7BGXCJ-ddc1b40935 
+FPGA Implementation of Canny edge detection 
+
+ 
+
+2. https://automaticaddison.com/how-the-sobel-operator-works/ 
+Basics of Image Processing 
+
+ 
+
+3. https://www.youtube.com/channel/UCXwcHOQ2ktHdERXNKCpmWnQ 
+Basics of Interfacing 
+
+ 
+
+4. https://www.xilinx.com/support/documentation/ip_documentation/div_gen/
+v5_1/pg151-div-gen.pdf 
+Divider IP Manual 
+
+ 
+
+5. https://www.xilinx.com/support/documentation/user_guides/ug585-Zynq-
+7000-TRM.pdf 
+Zynq SoC Manual 
+
+ 
+
+6. https://usermanual.wiki/Pdf/ZedBoard20Users20Guide.1528655017/view 
+ZedBoard User Manual 
+
+ 
+
+7. https://digilent.com/reference/programmable-logic/zedboard/reference-
+manual 
+ZedBoard reference Manual 
+
+ 
+
+8. https://projectf.io/posts/fixed-point-numbers-in-verilog/ 
+Fixed-point numbers in Verilog 
+
+ 
+
+9. https://www.fpgadeveloper.com/2014/08/using-the-axi-dma-in-vivado.html/ 
+AXI DMA  
+
+ 
+
+10. https://towardsdatascience.com/canny-edge-detection-step-by-step-in-
+python-computer-vision-b49c3a2d8123 
+Understanding Canny Edge detection  
