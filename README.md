@@ -64,3 +64,8 @@ Usually a weak edge pixel caused from true edges will be connected to a strong e
 
 # Results Obtained:
 
+![op_1](https://user-images.githubusercontent.com/85092975/137437229-3f31a1ee-6480-484f-b8fa-78a32c34fc68.jpg)
+
+![op_2](https://user-images.githubusercontent.com/85092975/137437241-3b249e7a-1e55-49e0-8d0f-06e8b1bb28df.jpg)
+
+![op_3](https://user-images.githubusercontent.com/85092975/137437259-6b51e4a5-5342-4ffc-9eda-ad310e7b1992.jpg)
