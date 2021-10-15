@@ -60,3 +60,7 @@ Usually a weak edge pixel caused from true edges will be connected to a strong e
 
 __The Complete Block Design:__
 
+![Block_design](https://user-images.githubusercontent.com/85092975/137436645-564adb44-7aaf-4282-b60c-f74eb41b6c30.jpg)
+
+__Results Obtained:__
+
