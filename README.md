@@ -23,7 +23,7 @@ __1.Gaussian Blur__
 
 The image after a 3x3 Gaussian mask has been passed across each pixel. Since all edge detection results are easily affected by the noise in the image, it is essential to filter out the noise to prevent false detection caused by it. To smooth the image, a Gaussian filter kernel is convolved with the image. This step will slightly smooth the image to reduce the effects of obvious noise on the edge detector. It is important to understand that the selection of the size of the Gaussian kernel will affect the performance of the detector. The larger the size is, the lower the detector's sensitivity to noise. Additionally, the localization error to detect the edge will slightly increase with the increase of the Gaussian filter kernel size.
 
-![Gaussian_kernel](https://user-images.githubusercontent.com/85092975/137435129-4c4692c2-3e5d-4195-a599-36c3ebfe0c88.jpg)
+![Gaussian_kernel](https://user-images.githubusercontent.com/85092975/137435129-4c4692c2-3e5d-4195-a599-36c3ebfe0c88.jpg)width="150" height="100"
 
 __2.Sobel Operation__
 
