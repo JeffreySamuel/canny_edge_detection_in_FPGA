@@ -34,6 +34,8 @@ An edge in an image may point in a variety of directions, so the canny algorithm
 __3.Non Maximum Suppression__
 
 This is an edge thinning technique. Lower bound cut-off suppression is applied to find the locations with the sharpest change of intensity value. The algorithm for each pixel in the gradient image is: 
+
     1. Compare the edge strength of the current pixel with the edge strength of the pixel in the positive and negative gradient directions. 
     2. If the edge strength of the current pixel is the largest compared to the other pixels in the mask with the same direction (e.g., a pixel that is pointing in the y-direction will be compared to the pixel above and below it in the vertical axis), the value will be preserved. Otherwise, the value will be suppressed. 
+    
 The algorithm categorizes the continuous gradient directions into a small set of discrete directions, and then moves a 3x3 filter over the output of the previous step (that is, the edge strength and gradient directions). At every pixel, it suppresses the edge strength of the center pixel (by setting its value to 0) if its magnitude is not greater than the magnitude of the two neighbors in the gradient direction. Note that the sign of the direction is irrelevant, i.e. north–south is the same as south–north and so on. 
