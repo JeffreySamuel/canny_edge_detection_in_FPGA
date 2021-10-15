@@ -25,11 +25,13 @@ The image after a 3x3 Gaussian mask has been passed across each pixel. Since all
 
 ![Gaussian_kernel](https://user-images.githubusercontent.com/85092975/137435129-4c4692c2-3e5d-4195-a599-36c3ebfe0c88.jpg)
 
+
 __2.Sobel Operation__
 
 An edge in an image may point in a variety of directions, so the canny algorithm uses four filters to detect horizontal, vertical and diagonal edges in the blurred image. The edge detection operator (here sobel) returns a value for the first derivative in the horizontal direction (Gx) and the vertical direction (Gy). From this the edge gradient and direction can be determined: The edge direction angle is rounded to one of four angles representing vertical, horizontal and the two diagonals (0°, 45°, 90° and 135°). An edge direction falling in each color region will be set to a specific angle values, for instance θ in [0°, 22.5°] or [157.5°, 180°] maps to 0°. 
 
 ![Sobel_kernel](https://user-images.githubusercontent.com/85092975/137435751-84962145-44d2-4bb4-a002-127d34a15a1f.jpg)
+
 
 __3.Non Maximum Suppression__
 
@@ -41,8 +43,16 @@ This is an edge thinning technique. Lower bound cut-off suppression is applied t
     
 The algorithm categorizes the continuous gradient directions into a small set of discrete directions, and then moves a 3x3 filter over the output of the previous step (that is, the edge strength and gradient directions). At every pixel, it suppresses the edge strength of the center pixel (by setting its value to 0) if its magnitude is not greater than the magnitude of the two neighbors in the gradient direction. Note that the sign of the direction is irrelevant, i.e. north–south is the same as south–north and so on. 
 
+
 __4.Double Thresholding__
 
 After application of non-maximum suppression, remaining edge pixels provide a more accurate representation of real edges in an image. However, some edge pixels remain that are caused by noise and color variation. In order to account for these spurious responses, it is essential to filter out edge pixels with a weak gradient value and preserve edge pixels with a high gradient value. 
 
 This is accomplished by selecting high and low threshold values. If an edge pixel’s gradient value is higher than the high threshold value, it is marked as a strong edge pixel. If an edge pixel’s gradient value is smaller than the high threshold value and larger than the low threshold value, it is marked as a weak edge pixel. If an edge pixel's gradient value is smaller than the low threshold value, it will be suppressed. The two threshold values are empirically determined and their definition will depend on the content of a given input image. 
+
+
+__5.Edge Tracking by Hysteresis__
+
+So far, the strong edge pixels should certainly be involved in the final edge image, as they are extracted from the true edges in the image. However, there will be some debate on the weak edge pixels, as these pixels can either be extracted from the true edge, or the noise/color variations. To achieve an accurate result, the weak edges caused by the latter reasons should be removed.  
+
+Usually a weak edge pixel caused from true edges will be connected to a strong edge pixel while noise responses are unconnected. To track the edge connection, blob analysis is applied by looking at a weak edge pixel and its 8-connected neighborhood pixels. As long as there is one strong edge pixel that is involved in the blob, that weak edge point can be identified as one that should be preserved. 
