@@ -60,6 +60,8 @@ Usually a weak edge pixel caused from true edges will be connected to a strong e
 
 # The Complete Block Design:
 
+The canny edge detection framework has been designed using verilog and the top module is packaged as an IP. Then the block design is created for acquiring image, processing it and displaying it in a VGA monitor. Lot of IPs from Xilinx has been used. The input image is transferred from the PC to the external DDR of the Zedboard FPGA. The output processed image is also stored back to the DDR. AXI DMA IP from Xilinx is used to access the contents of the DDR memory. Zedboard belongs to Zync 7000 series which features a Zync processing system. The Zync processing system has Programmable Logic (PL) and the Processing Subsystem(PS) (ARM Cortex-A9). The PL is designed, synthesized and implemented in Vivado software. The PS is controlled using Vitis Unified Platform by writing C code.
+
 ![Block_design](https://user-images.githubusercontent.com/85092975/137436645-564adb44-7aaf-4282-b60c-f74eb41b6c30.jpg)
 
 # Results Obtained:
